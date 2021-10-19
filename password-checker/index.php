@@ -7,9 +7,6 @@
 	<body>
 	<?php
 	
-
-	// echo preg_match_all($pattern, $sentence, $matches);
-
 	function formatVar($input) {
 		echo "<pre>";
 		var_dump($input);
@@ -48,8 +45,6 @@
 		}
 	}
 
-	// echo passwordValidator("hfhrjsh5#");
-
 	?>
 
 	<h1>type a password</h1>
@@ -68,10 +63,5 @@
 	<?php if ($_SERVER["REQUEST_METHOD"] === "POST"): ?>
 		<?=passwordValidator($password)?>
 	<?php endif?>
-
-
-	<script>
-		console.clear();
-	</script>
 	</body>
 </html>
