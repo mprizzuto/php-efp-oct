@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>PHP anagram checker</title>
+		<title>PHP password checker</title>
 	</head>
 	<body>
 	<?php
