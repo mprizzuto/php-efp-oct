@@ -17,19 +17,17 @@
 
 	function passwordValidator($password) {
 		$userMessage = "";
-		// $lettersAndNums = "/^[a-zA-Z]\d{1}+$/";
-		$lettersAndNums = "/^[a-zA-Z \d{1}]+$/";
-		// $sentence = "a0";
+		$lettersAndNums = "/^[\d{1}a-zA-Z]+$/";
 		$numsOnly = "/^\d+$/";
 		$lettersOnly = "/^[a-zA-Z]+$/";
-		$lettersNumsSpecialChars = "/./";
+		$lettersNumsSpecialChars = "/^[\da-zA-Z~!@#$%^&*(_+=]+$/";
 
 		if ( trim($password) === "" ) {
 			return "required!" . 0;
 		} 
 
 		elseif ( strlen($password) < 8 and preg_match_all($numsOnly, $password, $matches) === 1) {
-			return "very weak password, you only entered less than 8 chars and only nums" . 1;
+			return "very weak password, you entered less than 8 chars and only nums" . 1;
 		}
 
 		elseif ( strlen($password) < 8 and preg_match_all($lettersOnly, $password, $matches) === 1) {
@@ -44,6 +42,11 @@
 			return "very strong password, you entered atleast 8 alphanumeric characters and atleast one special char" . 10;
 		}
 	}
+
+	// $lettersAndNums = "/^[\d{1}a-zA-Z]+$/";
+	// $sentence = "";
+	// echo preg_match_all($lettersAndNums, $sentence, $matches);
+
 
 	?>
 

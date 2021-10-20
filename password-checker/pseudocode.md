@@ -6,4 +6,4 @@
 
 - check if PW is  strong. contains letters and atleast one num. atleast 8 chars long
 
-- cehck if PW is  very strong. contains atleast 8 chars and letters, nums, and special chars
+- cehck if PW is  very strong. contains atleast 8 chars,  nums, and special chars
