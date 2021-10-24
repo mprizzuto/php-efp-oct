@@ -34,7 +34,7 @@
 					$userMessage = "invalid entry, only enter letters";
 			} else {
 					$resultsTitle = "your results are";
-					$userMessage = "hello " . sanitizeInput($name) . " nice to meet you";
+					$userMessage = "hello " . sanitizeInput( greetUser($name) ) . " nice to meet you";
 				}
 
 			}

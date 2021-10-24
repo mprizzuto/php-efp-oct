@@ -14,4 +14,8 @@
 		return $input;
 	}
 
+	function greetUser($name):string {
+		return $name;
+	}
+
 ?>
