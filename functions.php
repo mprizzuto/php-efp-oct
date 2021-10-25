@@ -13,9 +13,13 @@
 		$input = stripslashes($input);
 		return $input;
 	}
-
-	function greetUser($name):string {
+	
+	function greetUser($name) :string {
 		return $name;
+	}
+
+	function countChars($input) :int {
+		return strlen($input);
 	}
 
 ?>
