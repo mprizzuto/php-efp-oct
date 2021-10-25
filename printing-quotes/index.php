@@ -15,17 +15,18 @@
   <body>
   	<?php
   	include "../functions.php";
-  	$errorMessage = $userMessage = "";
+  	$errorMessage = $userMessage = $resultsTitle = "";
   	$quote = $_POST["quote"] ?? null;
   	$author = $_POST["author"] ?? null;
+
 
   	if ($_SERVER["REQUEST_METHOD"] === "POST") {
   		if ( in_array("", $_POST) ) {
   			$errorMessage = "<span class='error'>required</span>";	
-  			// $userMessage = "you didnt type anything, try again";
-  		}
-
-  		else {
+  		} else if ( trim($quote) === "" or trim($author) === "" ) {
+  				$userMessage = "invalid input";
+  		} else {
+  			$resultsTitle = "your results";
   			$userMessage = "your quote is " .  "''$quote''" . " the author is" . $author;
   		}
   	}
@@ -50,7 +51,7 @@
   		<section class="results">
   			<inner-column>
   				<?php if ( !in_array("", $_POST) ): ?>
-  					<h2 class="heading-two">your results</h2>
+  					<h2 class="heading-two"><?=$resultsTitle?></h2>
   				<?=sanitizeInput($userMessage)?>
   			<?php endif;?>
   			</inner-column>
