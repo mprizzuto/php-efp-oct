@@ -1,0 +1,11 @@
+@import "forms.css";
+
+inner-column {
+	display: block;
+}
+
+inner-column {
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
