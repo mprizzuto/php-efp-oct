@@ -1,0 +1,20 @@
+/*test*/
+form {
+	line-height: 2;
+	outline:  2px solid black;
+	max-width: 400px;
+	padding:  20px;
+}
+
+label {
+	display: block;
+	line-height: 2;
+}
+
+.error::before {
+	content:  " ";
+}
+
+.error {
+	color:  red;
+}
