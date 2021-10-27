@@ -18,7 +18,29 @@ the numbers divied are 10
 
 ## pseudcode
 - only allow numerical data. 
+
 -	if user submits anythng but numbers, output appropriate error message
-- else, output the numbers with the approproaye operations applied to them
+
+- else, output the numbers with the appropriate operations applied to them
+
+- dont allow negative numbers, output error
+
+- initialize numberOne and numberTwo, point them to their respective form inputs
+
+- initialize result as a  string. interperolate variables in message
+
+assume numOne is 4 and numTwo is 2
+
+numOne * numTwo is 8
+numOne + numTwo is 6
+numOne - numTwo is 2
+numOne / numTwo is 2
+
+- create functions for each mathematical function. Have them return the result of the operation
+
+- interpolate function calls in result string. see example output above
+
+
+
 
 

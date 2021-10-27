@@ -1,0 +1,18 @@
+@import "reset.css";
+@import "forms.css";
+
+inner-column {
+	display: block;
+}
+
+inner-column {
+	padding:  30px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 600px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2.5em;
+}

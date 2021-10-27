@@ -33,4 +33,40 @@
 		return preg_match_all($pattern, $input);
 	}
 
+	// check a string for numbers only
+	function onlyNums($input) {
+		$pattern = "/^[0-9]+$/";
+		return preg_match_all($pattern, $input);
+	}
+
+	function addNums(int $numOne, int $numTwo) {
+		return $numOne + $numTwo;
+	}
+
+	function subtractNums(int $numOne, int $numTwo) {
+		return $numOne - $numTwo;
+	}
+
+	function multiplyNums(int $numOne, int $numTwo) {
+		return $numOne * $numTwo;
+	}
+
+	function divideNums(int $numOne, int $numTwo) {
+		// return $numOne / $numTwo = 1;
+		if ($numTwo === 0) {
+			return "you cant divide by 0!";
+		} if ($numTwo === 0) {
+			return false;
+		}
+		else {
+			return $numOne / $numTwo;
+		}
+
+	}
+
+
+
+
+
+
 ?>
