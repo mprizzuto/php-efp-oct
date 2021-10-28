@@ -64,6 +64,39 @@
 
 	}
 
+	// retirement-calc.php. calculate the retirement age. returns 0 if inputs arnt numbers
+	function retirementCalc() {
+		// $yearsLeftToRetire = "";
+		$currentAge = $_POST["current-age"] ?? null;
+		$retirementAge = $_POST["retirement-age"] ?? null;
+		// only allow numbers
+		$pattern = "/^[0-9]+$/";
+
+		// if not a number, return 0
+		if ( preg_match_all($pattern, $currentAge) === 0 or preg_match_all($pattern, $retirementAge) === 0 ) {
+			return 0;
+		}
+		elseif ($retirementAge === $currentAge) {
+			return "retirement age and current age match";
+		} elseif ( $retirementAge < $currentAge ) {
+			return "you can already retire!";
+		}
+		else {
+			// else, return data
+			// user post variables
+		
+
+		// get current year
+		$year = (int) date("Y");
+		
+		$yearsLeftToRetire = (int) $retirementAge - $currentAge;
+		$retirementYear = $year + $yearsLeftToRetire;
+
+			return "current age is " . $currentAge . " the retirement age is " . "$retirementAge you have $yearsLeftToRetire years left to retire. it is $year you can retire in $retirementYear";
+		}
+	}
+
+
 
 
 

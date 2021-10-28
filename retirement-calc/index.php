@@ -36,21 +36,22 @@
         $userMessage = "you must complete the form";
       }
 
-      elseif ( onlyNums($currentAge) === 0 or onlyNums($retirementAge) === 0 ) {
-        $error = "<span class='error'>nums only!</span>";
+      // elseif ( onlyNums($currentAge) === 0 or onlyNums($retirementAge) === 0 ) {
+      //   $error = "<span class='error'>nums only!</span>";
 
-        $messageTitle = "invalid input";
-        $userMessage = "you can only enter whole numbers";
-      } elseif ($retirementAge <= 0 or $currentAge <= 0) {
-          $messageTitle = "invalid input";
-          $userMessage = "enter a number greater than 0";
-      } elseif ( $retirementAge <= $currentAge ) {
-          $messageTitle = "cograts";
-          $userMessage = "you can alredy retire";
-      }
-      else {
-        $userMessage = "your current age is $currentAge you want to retire at $retirementAge you have $yearsLeftToRetire years until you can retire, $retirementMessage. it is $currentYear so you can retire in $retirementYear";
-      }
+      //   $messageTitle = "invalid input";
+      //   $userMessage = "you can only enter whole numbers";
+      // } elseif ($retirementAge <= 0 or $currentAge <= 0) {
+      //     $messageTitle = "invalid input";
+      //     $userMessage = "enter a number greater than 0";
+      // } elseif ( $retirementAge <= $currentAge ) {
+      //     $messageTitle = "cograts";
+      //     $userMessage = "you can alredy retire";
+      // }
+      // else {
+      //   $userMessage = "your current age is $currentAge you want to retire at $retirementAge you have $yearsLeftToRetire years until you can retire, $retirementMessage. it is $currentYear so you can retire in $retirementYear";
+      // }
+      $userMessage = sanitizeInput(retirementCalc());
     }
 
     ?>
@@ -76,7 +77,7 @@
         <inner-column>
           <h2 class="heading-two"><?=$messageTitle?></h2>
 
-          <p><?=sanitizeInput($userMessage)?></p>
+          <p><?=$userMessage?></p>
         </inner-column>
       </section>
     </main>
