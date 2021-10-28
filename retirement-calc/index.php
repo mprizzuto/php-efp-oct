@@ -27,7 +27,6 @@
     $retirementYear = $currentYear + (int) $yearsLeftToRetire;
 
     $retirementMessage = $retirementAge <= 0 ? "you can retire already" : "";
-    // formatInput($currentYear);
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
       if (in_array("", $_POST)) {
